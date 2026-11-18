@@ -9,7 +9,7 @@ export function stageShot(game,shot){
   if(shot.mode==='drive'){
     game.player.position.set(-15,0,-16);game.cars[0].mesh.position.copy(game.player.position);game.enterCar(game.cars[0],false);game.story='Sedan / shift malam';
   }else if(shot.mode==='chase'){
-    game.player.position.set(0,0,0);game.cars[0].mesh.position.copy(game.player.position);game.enterCar(game.cars[0],false);game.wanted=2;game.policeSpawn();game.story='Unit patroli mengunci rute.';
+    game.player.position.set(-15,0,-16);game.cars[0].mesh.position.copy(game.player.position);game.enterCar(game.cars[0],false);game.wanted=2;game.policeSpawn();game.story='Unit patroli mengunci rute.';
   }else{
     game.mission=0;game.timeLeft=72;game.marker.set(34,0,-44);game.story='Mara: paket ini harus sampai sebelum lampu dermaga padam.';
   }
